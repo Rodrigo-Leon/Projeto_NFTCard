@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+:root {
+    ---Softblue: hsl(215, 51%, 70%);
+    ---Cyan: hsl(178, 100%, 50%);
+    ---Verydarkbluecard: hsl(217, 54%, 11%);
+    ---Verydarkbluecardbg: hsl(216, 50%, 16%);
+    ---Verydarkblue: hsl(215, 32%, 27%);
+    ---White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(---Verydarkblue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.cartao {
+    background-color: var(---Verydarkbluecardbg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.329);
+}
+
+.view {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.view img {
+    width: 100%;
+    display: block;
+}
+
+.view-icone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%,0.5);
+    display: none;
+}
+
+.view-icone img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.view:hover .view-icone {
+    display: block;
+}
+
+.texto-cartao {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.texto-cartao h1 {
+    color: white;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.texto-cartao a{
+    text-decoration: none;
+    color: var(---White);
+}
+
+.texto-cartao a:hover {
+    color: var(---Cyan);
+}
+
+.texto-cartao p {
+    font-weight:400;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: var(---Softblue);
+}
+
+.detalhes {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+}
+
+.detalhes .eth, .detalhes .dias {
+    align-items: center;
+    display: flex;
+}
+
+.detalhes .eth img, .detalhes .dias img {
+    bottom: 5px;
+    position: relative;
+}
+
+.eth p, .dias p {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.eth p {
+    color: var(---Cyan);
+    font-weight: 400;
+}
+
+.dias p {
+    color: var(---Softblue);
+    font-weight: 300;
+}
+
+.linha {
+    border-bottom: 1px solid var(---Softblue);
+}
+
+.criador {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.criador img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.criador p {
+    font-weight: 300;
+    color: var(---Softblue);
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.criador a {
+    text-decoration: none;
+    color: var(---White);
+    font-weight: 300;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+.criador a:hover {
+    font-weight: 400;
+    color: var(---Cyan);
+}
